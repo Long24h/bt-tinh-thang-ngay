@@ -1,36 +1,8 @@
-function upArrowPressed() {
-    let element = document.getElementById("nobita");
-    element.style.top = parseInt(element.style.top) - 5 + 'px';
-}
-function downArrowPressed() {
-    var element = document.getElementById("nobita");
-    element.style.top = parseInt(element.style.top) + 5 + 'px';
-}
-function leftArrowPressed() {
-    var element = document.getElementById("nobita");
-    element.style.left = parseInt(element.style.left) - 5 + 'px';
-}
-function rightArrowPressed() {
-    var element = document.getElementById("nobita");
-    element.style.left = parseInt(element.style.left) + 5 + 'px';
-
-}
-function moveSelection(evt) {
-    switch (evt.keyCode) {
-        case 37:
-            leftArrowPressed();
-            break;
-        case 39:
-            rightArrowPressed();
-            break;
-        case 38:
-            upArrowPressed();
-            break;
-        case 40:
-            downArrowPressed();
-            break;
-    }
-}
-function docReady() {
-    window.addEventListener('keydown', moveSelection);
-}
+if (bmi < 18)
+    document.write("Underweight");
+else if (bmi < 25.0)
+    document.write("Normal");
+else if (bmi < 30.0)
+    document.write("Overweight");
+else
+    document.write("Obese");
