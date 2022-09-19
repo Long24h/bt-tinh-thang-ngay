@@ -1,14 +1,11 @@
-let browser = prompt("Enter browser name!")
-switch (browser) {
-    case 'Edge':
-        alert("You've got the Edge!");
-        break;
-    case 'Chrome':
-    case 'Firefox':
-    case 'Safari':
-    case 'Opera':
-        alert('Okay we support these browsers too');
-        break;
-    default:
-        alert('We hope that this page looks ok!');
+let imgObj = null;
+imgObj = document.getElementById('myImage');
+function init() {
+    imgObj = document.getElementById('myImage');
+    imgObj.style.position = 'relative';
+    imgObj.style.left = '0px';
 }
+function moveRight() {
+    imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+}
+window.onload = init;
